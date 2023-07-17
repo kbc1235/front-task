@@ -3,19 +3,11 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 interface propsType{
-  propsText : string;
+  type : string;
+  placeholder : string;
 }
 
-const Box = styled.div`
-  display: flex;
-  width:100%;
-  height:100%;
-  justify-content: center;
-  align-items: center;
-`
-const Input = styled.input.attrs({
-  type:'text',
-})`
+const Input = styled.input`
   padding:1em;
   border:1px solid #2e2e2e;
   font-size:1em;
@@ -23,11 +15,10 @@ const Input = styled.input.attrs({
   box-shadow: 0px 2px 10px rgba(0,0,0,0.5);
 `
 
-const InputBox = ()=>{
+const InputBox = ({type, placeholder}:propsType)=>{
+ 
   return(
-    <Box>
-      <Input/>
-    </Box>
+    <Input type={type} placeholder={placeholder}/>
   )
 }
 // const InputBox = ({propsText}:propsType)=>{
