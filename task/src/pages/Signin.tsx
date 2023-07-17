@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import InputBox from "./InputBox";
+import InputBox from "../components/InputBox";
 
 const SigninBox = styled.main`
   display: flex;
