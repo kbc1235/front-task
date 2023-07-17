@@ -1,3 +1,5 @@
+
+import { useState } from 'react';
 import styled from 'styled-components';
 
 const Box = styled.div`
@@ -18,6 +20,7 @@ const Input = styled.input.attrs({
 `
 
 const InputBox = ()=>{
+  const [value, setValue] = useState('')
   return(
     <Box>
       <Input />
