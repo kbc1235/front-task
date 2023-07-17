@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 const Box = styled.div`
   display: flex;
-  width:100svw;
-  height:100svh;
+  width:100%;
+  height:100%;
   justify-content: center;
   align-items: center;
 `

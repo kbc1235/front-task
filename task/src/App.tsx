@@ -1,12 +1,19 @@
-import { useState } from 'react'
-import InputBox from './components/InputBox'
+import { BrowserRouter, Routes, Route  } from 'react-router-dom';
+import Header from './components/Header';
+import Home from './components/Home';
+import Footer from './components/Footer';
+import Signin from './components/Signin';
 
 function App() {
-
   return (
-    <>
-      <InputBox/>
-    </>
+    <BrowserRouter>
+      <Header/>
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/Signin' element={<Signin/>} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   )
 }
 
