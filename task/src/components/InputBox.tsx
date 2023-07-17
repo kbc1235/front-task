@@ -2,6 +2,10 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
+interface propsType{
+  propsText : string;
+}
+
 const Box = styled.div`
   display: flex;
   width:100%;
@@ -20,12 +24,20 @@ const Input = styled.input.attrs({
 `
 
 const InputBox = ()=>{
-  const [value, setValue] = useState('')
   return(
     <Box>
-      <Input />
+      <Input/>
     </Box>
   )
 }
+// const InputBox = ({propsText}:propsType)=>{
+//   const [value, setValue] = useState('');
+//   setValue(propsText);
+//   return(
+//     <Box>
+//       <Input/>
+//     </Box>
+//   )
+// }
 
 export default InputBox;
