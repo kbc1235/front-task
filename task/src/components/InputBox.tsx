@@ -1,5 +1,3 @@
-
-import { useState } from 'react';
 import styled from 'styled-components';
 
 interface propsType{
@@ -16,9 +14,8 @@ const Input = styled.input`
 `
 
 const InputBox = ({type, placeholder}:propsType)=>{
- 
   return(
-    <Input type={type} placeholder={placeholder}/>
+    <Input type={type} placeholder={placeholder} />
   )
 }
 // const InputBox = ({propsText}:propsType)=>{

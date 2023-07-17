@@ -9,7 +9,7 @@ interface propsType{
 
 
 
-export function postDate() {
+export default function loginRequest() {
   try {
     const response = axios.post(
       "http://dev-api.riskzero.ai/auth/authenticate",
@@ -17,7 +17,8 @@ export function postDate() {
         headers: { Authorization: `Bearer ${token}` },
       }
     );
-    console.log(response);
+    
+    return console.log(response);
   } catch (error) {
     console.log(error);
   }
