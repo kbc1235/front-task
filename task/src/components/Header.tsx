@@ -27,10 +27,7 @@ const Nav = styled.nav`
 const Header = () => {
   return (
     <HeaderBox>
-      <Nav>
-        <Link to={"/"}>Home</Link>
-        <Link to={"/Signin"}>Signin</Link>
-      </Nav>
+      헤더
     </HeaderBox>
   );
 };

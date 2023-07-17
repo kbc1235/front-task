@@ -15,6 +15,7 @@ const Signin = ()=>{
   return(
     <SigninBox>
       서브페이지 인풋
+      <InputBox type='email' placeholder="이메일입력" />
       <InputBox type='password' placeholder="비밀번호" />
     </SigninBox>
   )
