@@ -25,21 +25,27 @@ const LoginBtn = styled.button`
 
 
 
-const Signin = ()=>{
+const Signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const onChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
+  const onChangeEmail = (value: string) => {
+    setEmail(value);
+    console.log(email)
   }
-  return(
+  const onChangePassword = (value: string) => {
+    setPassword(value);
+    console.log(password)
+  };
+  return (
     <SigninBox>
       서브페이지 인풋
-      <InputBox 
-      type='email'
-      placeholder="이메일입력"
+      <InputBox
+        type='email'
+        placeholder="이메일입력"
+        onChange={onChangeEmail}
       />
-      <InputBox type='password' placeholder="비밀번호" />
+      <InputBox type='password' placeholder="비밀번호" onChange={onChangePassword}/>
       <LoginBtn type='button' onClick={loginRequest}>로그인</LoginBtn>
     </SigninBox>
   )

@@ -1,8 +1,10 @@
+import { ChangeEvent } from 'react';
 import styled from 'styled-components';
 
 interface propsType{
   type : string;
   placeholder : string;
+  onChange: (value: string) => void;
 }
 
 const Input = styled.input`
@@ -13,9 +15,13 @@ const Input = styled.input`
   box-shadow: 0px 2px 10px rgba(0,0,0,0.5);
 `
 
-const InputBox = ({type, placeholder}:propsType)=>{
+const InputBox:React.FC<propsType> = ({type, placeholder,onChange})=>{
+  const HendleChang = (event: ChangeEvent<HTMLInputElement>) => {
+    const inputValue = event.target.value;
+    onChange(inputValue);
+  }
   return(
-    <Input type={type} placeholder={placeholder} />
+    <Input type={type} placeholder={placeholder}  onChange={HendleChang} />
   )
 }
 // const InputBox = ({propsText}:propsType)=>{
